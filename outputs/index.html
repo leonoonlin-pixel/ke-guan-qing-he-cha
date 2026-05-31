@@ -362,7 +362,7 @@
 
     <!-- 门店位置区 -->
     <section id="store" class="mb-5">
-      <div class="grid grid-cols-1 gap-4 lg:grid-cols-[0.9fr_1.1fr]">
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-[0.82fr_1.18fr]">
         <div data-animation-on-scroll class="rounded-card bg-rice p-8 shadow-card sm:p-10">
           <p class="mb-4 text-sm tracking-[0.3em] text-wood">门店体验</p>
           <h2 class="font-title text-4xl font-semibold leading-tight text-teaGreen">到店坐一盏茶</h2>
@@ -373,11 +373,12 @@
           <div class="mt-7 space-y-4">
             <div class="rounded-[14px] bg-teaCard p-4">
               <p class="text-xs tracking-[0.18em] text-muted">门店名称</p>
-              <p class="mt-2 font-title text-xl font-semibold text-teaGreen">客官请喝茶 · 广州学府茶铺</p>
+              <p class="mt-2 font-title text-xl font-semibold text-teaGreen">客官请喝茶 · 南方学院茶铺</p>
             </div>
             <div class="rounded-[14px] bg-teaCard p-4">
               <p class="text-xs tracking-[0.18em] text-muted">门店地址</p>
-              <p class="mt-2 text-sm leading-7 text-ink">广州市从化区广州南方学院 学府路</p>
+              <p class="mt-2 text-sm leading-7 text-ink">广东省广州市从化区温泉镇温泉大道882号广州南方学院内，博学路 · 蜜雪冰城附近</p>
+              <p class="mt-2 text-xs leading-6 text-muted">定位关键词：广州南方学院 / 博学路 / 蜜雪冰城 / 温泉大道882号</p>
             </div>
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div class="rounded-[14px] bg-teaCard p-4">
@@ -392,13 +393,21 @@
           </div>
 
           <div class="mt-7 flex flex-col gap-3 sm:flex-row">
-            <a href="https://uri.amap.com/search?keyword=%E5%B9%BF%E5%B7%9E%E5%8D%97%E6%96%B9%E5%AD%A6%E9%99%A2%20%E5%AD%A6%E5%BA%9C%E8%B7%AF&city=%E5%B9%BF%E5%B7%9E&view=map" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full bg-teaGreen px-7 py-3 text-sm font-medium text-rice transition hover:bg-footerGreen">打开地图导航</a>
+            <a href="https://map.baidu.com/search/%E5%B9%BF%E5%B7%9E%E5%8D%97%E6%96%B9%E5%AD%A6%E9%99%A2%20%E5%8D%9A%E5%AD%A6%E8%B7%AF%20%E8%9C%9C%E9%9B%AA%E5%86%B0%E5%9F%8E" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full bg-teaGreen px-7 py-3 text-sm font-medium text-rice transition hover:bg-footerGreen">打开地图导航</a>
+            <a href="https://map.qq.com/m/search/result/word=%E5%B9%BF%E5%B7%9E%E5%8D%97%E6%96%B9%E5%AD%A6%E9%99%A2%20%E5%8D%9A%E5%AD%A6%E8%B7%AF%20%E8%9C%9C%E9%9B%AA%E5%86%B0%E5%9F%8E" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full border border-teaGreen/35 px-7 py-3 text-sm font-medium text-teaGreen transition hover:bg-teaCard">腾讯地图</a>
             <a href="#member-contact" class="inline-flex items-center justify-center rounded-full border border-teaGreen/35 px-7 py-3 text-sm font-medium text-teaGreen transition hover:bg-teaCard">预约茶席</a>
           </div>
         </div>
 
-        <div data-animation-on-scroll class="image-frame overflow-hidden rounded-card bg-teaCard shadow-soft">
-          <img src="assets/store-map.png" alt="客官请喝茶广州学府茶铺地图示意图" class="h-full min-h-[360px] w-full object-cover" onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');">
+        <div data-animation-on-scroll class="image-frame relative min-h-[440px] overflow-hidden rounded-card bg-teaCard shadow-soft lg:min-h-[520px]">
+          <img src="assets/store-map.png" alt="客官请喝茶南方学院茶铺地图示意图" class="h-full min-h-[440px] w-full scale-110 object-cover lg:min-h-[520px]" onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');">
+          <div class="pointer-events-none absolute inset-0 text-xs font-medium">
+            <span class="absolute left-[8%] top-[13%] rounded-full bg-rice/92 px-3 py-2 text-teaGreen shadow-card backdrop-blur">广州南方学院</span>
+            <span class="absolute left-[44%] top-[10%] rounded-full bg-rice/92 px-3 py-2 text-teaGreen shadow-card backdrop-blur">博学路</span>
+            <span class="absolute right-[8%] top-[28%] rounded-full bg-rice/92 px-3 py-2 text-teaGreen shadow-card backdrop-blur">蜜雪冰城附近</span>
+            <span class="absolute bottom-[13%] left-[7%] hidden rounded-full bg-rice/92 px-3 py-2 text-teaGreen shadow-card backdrop-blur sm:inline-flex">温泉大道882号</span>
+            <span class="absolute left-[48%] top-[52%] rounded-full bg-teaGreen px-4 py-2 text-rice shadow-card">客官请喝茶</span>
+          </div>
         </div>
       </div>
     </section>
