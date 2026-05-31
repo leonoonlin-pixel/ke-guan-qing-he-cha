@@ -102,7 +102,7 @@
         <a class="transition hover:text-teaGreen" href="#products">茶品</a>
         <a class="transition hover:text-teaGreen" href="#culture">茶文化</a>
         <a class="transition hover:text-teaGreen" href="#story">关于我们</a>
-        <a class="transition hover:text-teaGreen" href="#visit">门店体验</a>
+        <a class="transition hover:text-teaGreen" href="#store">门店体验</a>
       </nav>
 
       <div class="flex items-center gap-2 text-teaGreen">
@@ -158,7 +158,7 @@
                   <h3 class="font-title text-3xl font-semibold text-rice">门店茶席</h3>
                   <p class="mt-2 max-w-[13rem] text-sm leading-6 text-rice/85">预约一场安静的功夫茶体验</p>
                 </div>
-                <a href="#visit" class="inline-flex h-10 w-fit items-center gap-2 rounded-full border border-rice/45 px-4 text-sm text-rice transition hover:bg-rice hover:text-teaGreen">预约体验 <span aria-hidden="true">↗</span></a>
+                <a href="#store" class="inline-flex h-10 w-fit items-center gap-2 rounded-full border border-rice/45 px-4 text-sm text-rice transition hover:bg-rice hover:text-teaGreen">预约体验 <span aria-hidden="true">↗</span></a>
               </div>
               <div class="image-frame absolute bottom-0 right-0 h-32 w-40 rounded-tl-[28px]">
                 <img src="assets/tea-room.png" alt="门店茶席" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');">
@@ -360,6 +360,49 @@
       </div>
     </section>
 
+    <!-- 门店位置区 -->
+    <section id="store" class="mb-5">
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-[0.9fr_1.1fr]">
+        <div data-animation-on-scroll class="rounded-card bg-rice p-8 shadow-card sm:p-10">
+          <p class="mb-4 text-sm tracking-[0.3em] text-wood">门店体验</p>
+          <h2 class="font-title text-4xl font-semibold leading-tight text-teaGreen">到店坐一盏茶</h2>
+          <p class="mt-5 text-sm leading-8 text-muted">
+            欢迎来到客官请喝茶的线下茶铺，把游戏里的治愈茶馆，走进现实生活。
+          </p>
+
+          <div class="mt-7 space-y-4">
+            <div class="rounded-[14px] bg-teaCard p-4">
+              <p class="text-xs tracking-[0.18em] text-muted">门店名称</p>
+              <p class="mt-2 font-title text-xl font-semibold text-teaGreen">客官请喝茶 · 广州学府茶铺</p>
+            </div>
+            <div class="rounded-[14px] bg-teaCard p-4">
+              <p class="text-xs tracking-[0.18em] text-muted">门店地址</p>
+              <p class="mt-2 text-sm leading-7 text-ink">广州市从化区广州南方学院 学府路</p>
+            </div>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div class="rounded-[14px] bg-teaCard p-4">
+                <p class="text-xs tracking-[0.18em] text-muted">营业时间</p>
+                <p class="mt-2 text-sm text-ink">周一至周日 10:00-21:30</p>
+              </div>
+              <div class="rounded-[14px] bg-teaCard p-4">
+                <p class="text-xs tracking-[0.18em] text-muted">预约联系</p>
+                <p class="mt-2 text-sm text-ink">020-8848 0668 / KGQHC2026</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+            <a href="https://uri.amap.com/search?keyword=%E5%B9%BF%E5%B7%9E%E5%8D%97%E6%96%B9%E5%AD%A6%E9%99%A2%20%E5%AD%A6%E5%BA%9C%E8%B7%AF&city=%E5%B9%BF%E5%B7%9E&view=map" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full bg-teaGreen px-7 py-3 text-sm font-medium text-rice transition hover:bg-footerGreen">打开地图导航</a>
+            <a href="#member-contact" class="inline-flex items-center justify-center rounded-full border border-teaGreen/35 px-7 py-3 text-sm font-medium text-teaGreen transition hover:bg-teaCard">预约茶席</a>
+          </div>
+        </div>
+
+        <div data-animation-on-scroll class="image-frame overflow-hidden rounded-card bg-teaCard shadow-soft">
+          <img src="assets/store-map.png" alt="客官请喝茶广州学府茶铺地图示意图" class="h-full min-h-[360px] w-full object-cover" onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');">
+        </div>
+      </div>
+    </section>
+
     <!-- 用户评价区 -->
     <section class="mb-5">
       <div class="rounded-t-card bg-rice p-5 text-center shadow-card">
@@ -416,7 +459,7 @@
             <li><a class="hover:text-rice" href="#products">茶品</a></li>
             <li><a class="hover:text-rice" href="#culture">茶文化</a></li>
             <li><a class="hover:text-rice" href="#story">关于我们</a></li>
-            <li><a class="hover:text-rice" href="#visit">门店体验</a></li>
+            <li><a class="hover:text-rice" href="#store">门店体验</a></li>
           </ul>
         </div>
 
