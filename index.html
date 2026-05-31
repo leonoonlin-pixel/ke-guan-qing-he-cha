@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>客官请喝茶｜国风治愈系生活茶品官网</title>
+  <meta name="description" content="客官请喝茶，把游戏里的那杯茶，带回你的日常生活。精选高山原叶，以传统工艺匠心制作。">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rice: '#F7F3EA',
+            teaCard: '#EFE6D6',
+            teaGreen: '#2F4F3A',
+            sage: '#8C9A83',
+            wood: '#B99A72',
+            ink: '#222820',
+            muted: '#756F66',
+            footerGreen: '#243829',
+            mist: '#E7E2D7'
+          },
+          fontFamily: {
+            title: ['Songti SC', 'Noto Serif SC', 'STSong', 'SimSun', 'serif'],
+            body: ['Noto Sans SC', 'Microsoft YaHei', 'PingFang SC', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 18px 50px rgba(47, 79, 58, 0.08)',
+            card: '0 10px 28px rgba(34, 40, 32, 0.07)'
+          },
+          borderRadius: {
+            card: '18px'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 15% 8%, rgba(185, 154, 114, 0.12), transparent 26rem),
+        radial-gradient(circle at 82% 20%, rgba(140, 154, 131, 0.16), transparent 24rem),
+        #F7F3EA;
+    }
+
+    .animate-on-scroll-hidden {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .animate-on-scroll-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .image-frame {
+      position: relative;
+      background:
+        linear-gradient(135deg, rgba(247, 243, 234, 0.72), rgba(239, 230, 214, 0.9)),
+        repeating-linear-gradient(45deg, rgba(47, 79, 58, 0.05) 0 1px, transparent 1px 12px);
+    }
+
+    .image-frame.image-missing::after {
+      content: '图片待准备';
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: #756F66;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+    }
+
+    .tea-pattern {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.24) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+  </style>
+</head>
+
+<body class="font-body text-ink antialiased overflow-x-hidden">
+  <!-- Header 顶部导航 -->
+  <header class="sticky top-0 z-50 border-b border-teaGreen/10 bg-rice/88 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-[1200px] items-center justify-between gap-5 px-5 py-4">
+      <a href="#" class="flex items-center gap-3" aria-label="客官请喝茶首页">
+        <span class="font-title text-2xl font-semibold tracking-[0.12em] text-teaGreen">客官请喝茶</span>
+        <span class="grid h-9 w-9 place-items-center rounded-[8px] bg-[#A64532] font-title text-xs leading-tight text-rice shadow-card">茶铺</span>
+      </a>
+
+      <nav class="hidden items-center gap-8 text-sm text-muted lg:flex" aria-label="主导航">
+        <a class="transition hover:text-teaGreen" href="#">首页</a>
+        <a class="transition hover:text-teaGreen" href="#products">茶品</a>
+        <a class="transition hover:text-teaGreen" href="#culture">茶文化</a>
+        <a class="transition hover:text-teaGreen" href="#story">关于我们</a>
+        <a class="transition hover:text-teaGreen" href="#visit">门店体验</a>
+      </nav>
+
+      <div class="flex items-center gap-2 text-teaGreen">
+        <button class="grid h-10 w-10 place-items-center rounded-full border border-teaGreen/15 bg-white/35 transition hover:bg-teaCard" aria-label="搜索">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+        </button>
+        <button class="grid h-10 w-10 place-items-center rounded-full border border-teaGreen/15 bg-white/35 transition hover:bg-teaCard" aria-label="用户">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 21a8 8 0 0 0-16 0"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </button>
+        <button class="grid h-10 w-10 place-items-center rounded-full border border-teaGreen/15 bg-white/35 transition hover:bg-teaCard" aria-label="购物袋">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 8h12l-1 13H7L6 8Z"></path><path d="M9 8a3 3 0 0 1 6 0"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-[1200px] px-5 pt-5">
+    <!-- Hero 主视觉区 -->
+    <section class="mb-5">
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-[1.08fr_0.92fr]">
+        <div class="flex flex-col gap-4">
+          <div data-animation-on-scroll class="tea-pattern flex min-h-[460px] flex-col justify-center rounded-card bg-teaCard p-8 shadow-soft sm:p-12">
+            <p class="mb-4 text-sm tracking-[0.38em] text-wood">把游戏里的那杯茶，带回你的日常生活</p>
+            <h1 class="font-title text-[2.85rem] font-semibold leading-tight text-teaGreen sm:text-[4.6rem]">
+              一杯好茶，<br>慢享生活之美
+            </h1>
+            <p class="mt-6 max-w-[640px] text-base leading-8 text-muted">
+              精选高山原叶，以传统工艺匠心制作。从游戏里的茶馆，到你手边的日常茶席。
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="#products" class="inline-flex items-center justify-center rounded-full bg-teaGreen px-8 py-3 text-sm font-medium text-rice transition hover:bg-footerGreen">探索茶品</a>
+              <a href="#culture" class="inline-flex items-center justify-center rounded-full border border-teaGreen/40 px-8 py-3 text-sm font-medium text-teaGreen transition hover:bg-rice">了解茶文化</a>
+            </div>
+          </div>
+
+          <div id="visit" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <article data-animation-on-scroll class="group relative min-h-[220px] overflow-hidden rounded-card bg-[#E8D7BF] p-6 shadow-card">
+              <div class="relative z-10 flex h-full flex-col justify-between">
+                <div>
+                  <h3 class="font-title text-3xl font-semibold text-teaGreen">茶品礼盒</h3>
+                  <p class="mt-2 max-w-[13rem] text-sm leading-6 text-muted">适合自饮、送礼与玩家收藏</p>
+                </div>
+                <a href="#products" class="inline-flex h-10 w-fit items-center gap-2 rounded-full border border-teaGreen/35 px-4 text-sm text-teaGreen transition hover:bg-rice">查看礼盒 <span aria-hidden="true">↗</span></a>
+              </div>
+              <div class="image-frame absolute bottom-0 right-0 h-32 w-40 rounded-tl-[28px]">
+                <img src="assets/tea-gift-box.png" alt="茶品礼盒" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');">
+              </div>
+            </article>
+
+            <article data-animation-on-scroll class="group relative min-h-[220px] overflow-hidden rounded-card bg-sage p-6 shadow-card">
+              <div class="relative z-10 flex h-full flex-col justify-between">
+                <div>
+                  <h3 class="font-title text-3xl font-semibold text-rice">门店茶席</h3>
+                  <p class="mt-2 max-w-[13rem] text-sm leading-6 text-rice/85">预约一场安静的功夫茶体验</p>
+                </div>
+                <a href="#visit" class="inline-flex h-10 w-fit items-center gap-2 rounded-full border border-rice/45 px-4 text-sm text-rice transition hover:bg-rice hover:text-teaGreen">预约体验 <span aria-hidden="true">↗</span></a>
+              </div>
+              <div class="image-frame absolute bottom-0 right-0 h-32 w-40 rounded-tl-[28px]">
+                <img src="assets/tea-room.png" alt="门店茶席" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');">
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div data-animation-on-scroll class="image-frame min-h-[430px] overflow-hidden rounded-card shadow-soft lg:min-h-full">
+          <img src="assets/tea-hero.png" alt="木质茶桌上的绿茶、白瓷茶盏与茶叶罐" class="h-full w-full object-cover" onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');">
+        </div>
+      </div>
+    </section>
+
+    <!-- 茶类入口区 -->
+    <section id="culture" class="mb-5">
+      <div class="mb-4 flex flex-col justify-between gap-3 rounded-card bg-rice px-6 py-4 shadow-card sm:flex-row sm:items-end">
+        <div>
+          <h2 class="font-title text-3xl font-semibold text-teaGreen">四季好茶</h2>
+          <p class="mt-2 text-sm text-muted">按口感与场景，找到适合你的那一杯。</p>
+        </div>
+        <span class="text-sm text-wood">春鲜、夏清、秋醇、冬暖</span>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <article data-animation-on-scroll class="rounded-card bg-teaCard p-6 shadow-card transition hover:-translate-y-1 hover:shadow-soft">
+          <span class="mb-6 grid h-12 w-12 place-items-center rounded-full bg-rice text-teaGreen">绿</span>
+          <h3 class="font-title text-2xl font-semibold text-teaGreen">绿茶</h3>
+          <p class="mt-3 text-sm leading-7 text-muted">鲜爽甘醇，适合午后办公</p>
+        </article>
+        <article data-animation-on-scroll class="rounded-card bg-[#E9DDCC] p-6 shadow-card transition hover:-translate-y-1 hover:shadow-soft">
+          <span class="mb-6 grid h-12 w-12 place-items-center rounded-full bg-rice text-teaGreen">红</span>
+          <h3 class="font-title text-2xl font-semibold text-teaGreen">红茶</h3>
+          <p class="mt-3 text-sm leading-7 text-muted">香甜温润，适合清晨与冬日</p>
+        </article>
+        <article data-animation-on-scroll class="rounded-card bg-[#E2E7D9] p-6 shadow-card transition hover:-translate-y-1 hover:shadow-soft">
+          <span class="mb-6 grid h-12 w-12 place-items-center rounded-full bg-rice text-teaGreen">乌</span>
+          <h3 class="font-title text-2xl font-semibold text-teaGreen">乌龙茶</h3>
+          <p class="mt-3 text-sm leading-7 text-muted">醇厚回甘，适合慢饮细品</p>
+        </article>
+        <article data-animation-on-scroll class="rounded-card bg-[#EFE4DC] p-6 shadow-card transition hover:-translate-y-1 hover:shadow-soft">
+          <span class="mb-6 grid h-12 w-12 place-items-center rounded-full bg-rice text-teaGreen">花</span>
+          <h3 class="font-title text-2xl font-semibold text-teaGreen">花草茶</h3>
+          <p class="mt-3 text-sm leading-7 text-muted">自然花香，适合晚间放松</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 品牌卖点区 -->
+    <section class="mb-5 rounded-card bg-sage/70 p-6 shadow-card sm:p-8">
+      <div class="mb-6 text-center">
+        <h2 class="font-title text-3xl font-semibold text-teaGreen">源自茶山，制于匠心</h2>
+      </div>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <article data-animation-on-scroll class="rounded-card bg-rice/80 p-5">
+          <div class="mb-5 text-2xl text-wood">01</div>
+          <h3 class="font-title text-xl font-semibold text-teaGreen">高山原叶</h3>
+          <p class="mt-2 text-sm leading-7 text-muted">精选核心茶区原叶，保留自然茶香</p>
+        </article>
+        <article data-animation-on-scroll class="rounded-card bg-rice/80 p-5">
+          <div class="mb-5 text-2xl text-wood">02</div>
+          <h3 class="font-title text-xl font-semibold text-teaGreen">传统工艺</h3>
+          <p class="mt-2 text-sm leading-7 text-muted">遵循茶类工艺，慢制不急躁</p>
+        </article>
+        <article data-animation-on-scroll class="rounded-card bg-rice/80 p-5">
+          <div class="mb-5 text-2xl text-wood">03</div>
+          <h3 class="font-title text-xl font-semibold text-teaGreen">品质保证</h3>
+          <p class="mt-2 text-sm leading-7 text-muted">每一罐都经过基础筛选与封装</p>
+        </article>
+        <article data-animation-on-scroll class="rounded-card bg-rice/80 p-5">
+          <div class="mb-5 text-2xl text-wood">04</div>
+          <h3 class="font-title text-xl font-semibold text-teaGreen">轻松好喝</h3>
+          <p class="mt-2 text-sm leading-7 text-muted">降低喝茶门槛，新手也能轻松入口</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 精选茶品区 -->
+    <section id="products" class="mb-5">
+      <div class="rounded-t-card bg-teaGreen px-6 py-5 text-center text-rice">
+        <h2 class="font-title text-3xl font-semibold">精选茶品</h2>
+        <p class="mt-2 text-sm text-rice/75">源自好产地，传承好工艺，品味好生活。</p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 pt-4 md:grid-cols-2">
+        <article data-animation-on-scroll class="flex min-h-[470px] flex-col rounded-card bg-teaCard p-5 shadow-card">
+          <span class="mb-3 w-fit rounded-full bg-teaGreen px-3 py-1 text-xs text-rice">人气推荐</span>
+          <div class="image-frame mb-5 aspect-[4/3] overflow-hidden rounded-[14px]">
+            <img src="assets/longjing.png" alt="明前龙井" class="h-full w-full object-cover" onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');">
+          </div>
+          <h3 class="font-title text-2xl font-semibold text-teaGreen">明前龙井</h3>
+          <p class="mt-3 flex-1 text-sm leading-7 text-muted">清鲜豆香，回甘持久，适合午后办公的一杯清醒茶。</p>
+          <div class="mt-5 flex items-end justify-between border-t border-teaGreen/10 pt-4">
+            <div>
+              <p class="text-xs text-muted">规格：50g</p>
+              <p class="mt-1 font-title text-2xl font-semibold text-teaGreen">¥168</p>
+            </div>
+            <button class="rounded-full border border-teaGreen/35 px-4 py-2 text-sm text-teaGreen transition hover:bg-teaGreen hover:text-rice">加入茶篮</button>
+          </div>
+        </article>
+
+        <article data-animation-on-scroll class="flex min-h-[470px] flex-col rounded-card bg-teaCard p-5 shadow-card">
+          <span class="mb-3 w-fit rounded-full bg-sage px-3 py-1 text-xs text-rice">温润红茶</span>
+          <div class="image-frame mb-5 aspect-[4/3] overflow-hidden rounded-[14px]">
+            <img src="assets/black-tea.png" alt="正山小种" class="h-full w-full object-cover" onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');">
+          </div>
+          <h3 class="font-title text-2xl font-semibold text-teaGreen">正山小种</h3>
+          <p class="mt-3 flex-1 text-sm leading-7 text-muted">松烟香淡，滋味醇厚，适合清晨与冬日慢饮。</p>
+          <div class="mt-5 flex items-end justify-between border-t border-teaGreen/10 pt-4">
+            <div>
+              <p class="text-xs text-muted">规格：50g</p>
+              <p class="mt-1 font-title text-2xl font-semibold text-teaGreen">¥128</p>
+            </div>
+            <button class="rounded-full border border-teaGreen/35 px-4 py-2 text-sm text-teaGreen transition hover:bg-teaGreen hover:text-rice">加入茶篮</button>
+          </div>
+        </article>
+
+        <article data-animation-on-scroll class="flex min-h-[470px] flex-col rounded-card bg-teaCard p-5 shadow-card">
+          <span class="mb-3 w-fit rounded-full bg-wood px-3 py-1 text-xs text-rice">功夫茶首选</span>
+          <div class="image-frame mb-5 aspect-[4/3] overflow-hidden rounded-[14px]">
+            <img src="assets/dancong.png" alt="凤凰单丛" class="h-full w-full object-cover" onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');">
+          </div>
+          <h3 class="font-title text-2xl font-semibold text-teaGreen">凤凰单丛</h3>
+          <p class="mt-3 flex-1 text-sm leading-7 text-muted">兰花蜜韵，香气悠长，适合细品的一款乌龙茶。</p>
+          <div class="mt-5 flex items-end justify-between border-t border-teaGreen/10 pt-4">
+            <div>
+              <p class="text-xs text-muted">规格：50g</p>
+              <p class="mt-1 font-title text-2xl font-semibold text-teaGreen">¥168</p>
+            </div>
+            <button class="rounded-full border border-teaGreen/35 px-4 py-2 text-sm text-teaGreen transition hover:bg-teaGreen hover:text-rice">加入茶篮</button>
+          </div>
+        </article>
+
+        <article data-animation-on-scroll class="flex min-h-[470px] flex-col rounded-card bg-teaCard p-5 shadow-card">
+          <span class="mb-3 w-fit rounded-full bg-[#7F8E75] px-3 py-1 text-xs text-rice">清新花香</span>
+          <div class="image-frame mb-5 aspect-[4/3] overflow-hidden rounded-[14px]">
+            <img src="assets/jasmine-tea.png" alt="茉莉花茶" class="h-full w-full object-cover" onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');">
+          </div>
+          <h3 class="font-title text-2xl font-semibold text-teaGreen">茉莉花茶</h3>
+          <p class="mt-3 flex-1 text-sm leading-7 text-muted">花香清雅，茶汤柔和，适合日常轻松饮用。</p>
+          <div class="mt-5 flex items-end justify-between border-t border-teaGreen/10 pt-4">
+            <div>
+              <p class="text-xs text-muted">规格：50g</p>
+              <p class="mt-1 font-title text-2xl font-semibold text-teaGreen">¥98</p>
+            </div>
+            <button class="rounded-full border border-teaGreen/35 px-4 py-2 text-sm text-teaGreen transition hover:bg-teaGreen hover:text-rice">加入茶篮</button>
+          </div>
+        </article>
+
+        <article data-animation-on-scroll class="flex min-h-[470px] flex-col rounded-card bg-teaCard p-5 shadow-card">
+          <span class="mb-3 w-fit rounded-full bg-[#A88074] px-3 py-1 text-xs text-rice">晚间舒缓</span>
+          <div class="image-frame mb-5 aspect-[4/3] overflow-hidden rounded-[14px]">
+            <img src="assets/rose-tea.png" alt="玫瑰花茶" class="h-full w-full object-cover" onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');">
+          </div>
+          <h3 class="font-title text-2xl font-semibold text-teaGreen">玫瑰花茶</h3>
+          <p class="mt-3 flex-1 text-sm leading-7 text-muted">玫瑰芳香，温润舒缓，适合睡前放松。</p>
+          <div class="mt-5 flex items-end justify-between border-t border-teaGreen/10 pt-4">
+            <div>
+              <p class="text-xs text-muted">规格：50g</p>
+              <p class="mt-1 font-title text-2xl font-semibold text-teaGreen">¥88</p>
+            </div>
+            <button class="rounded-full border border-teaGreen/35 px-4 py-2 text-sm text-teaGreen transition hover:bg-teaGreen hover:text-rice">加入茶篮</button>
+          </div>
+        </article>
+
+        <article data-animation-on-scroll class="flex min-h-[470px] flex-col rounded-card bg-teaCard p-5 shadow-card">
+          <span class="mb-3 w-fit rounded-full bg-teaGreen px-3 py-1 text-xs text-rice">新客首选</span>
+          <div class="image-frame mb-5 aspect-[4/3] overflow-hidden rounded-[14px]">
+            <img src="assets/gift-set.png" alt="茶客入门礼盒" class="h-full w-full object-cover" onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');">
+          </div>
+          <h3 class="font-title text-2xl font-semibold text-teaGreen">茶客入门礼盒</h3>
+          <p class="mt-3 flex-1 text-sm leading-7 text-muted">四款小罐组合，一次尝遍不同茶香。</p>
+          <div class="mt-5 flex items-end justify-between border-t border-teaGreen/10 pt-4">
+            <div>
+              <p class="text-xs text-muted">规格：4×20g</p>
+              <p class="mt-1 font-title text-2xl font-semibold text-teaGreen">¥199</p>
+            </div>
+            <button class="rounded-full border border-teaGreen/35 px-4 py-2 text-sm text-teaGreen transition hover:bg-teaGreen hover:text-rice">加入茶篮</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 品牌故事区 -->
+    <section id="story" class="mb-5">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div data-animation-on-scroll class="rounded-card bg-teaGreen p-8 text-rice shadow-soft sm:p-12">
+          <p class="mb-4 text-sm tracking-[0.28em] text-rice/65">品牌故事</p>
+          <h2 class="font-title text-4xl font-semibold leading-tight">从游戏茶馆，<br>到现实茶桌</h2>
+          <div class="mt-6 space-y-4 text-sm leading-8 text-rice/82">
+            <p>《客官请喝茶》最初是一间游戏里的小茶馆。我们希望玩家在经营茶馆、接待茶客、完成一杯茶的过程中，感受到片刻安静与治愈。</p>
+            <p>现在，我们把这份体验带到现实：精选真实茶叶，设计适合日常饮用的茶品，让每一位“客官”都能在忙碌生活中，为自己留下一杯茶的时间。</p>
+          </div>
+          <a href="#" class="mt-8 inline-flex rounded-full bg-rice px-7 py-3 text-sm font-medium text-teaGreen transition hover:bg-teaCard">了解品牌故事</a>
+        </div>
+        <div data-animation-on-scroll class="image-frame min-h-[360px] overflow-hidden rounded-card shadow-card">
+          <img src="assets/tea-story.png" alt="现实茶桌上的茶具与茶品" class="h-full w-full object-cover" onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');">
+        </div>
+      </div>
+    </section>
+
+    <!-- 用户评价区 -->
+    <section class="mb-5">
+      <div class="rounded-t-card bg-rice p-5 text-center shadow-card">
+        <h2 class="font-title text-3xl font-semibold text-teaGreen">客官们这样说</h2>
+      </div>
+      <div class="grid grid-cols-1 gap-4 rounded-b-card bg-rice p-5 shadow-card md:grid-cols-3">
+        <article data-animation-on-scroll class="rounded-card bg-teaCard p-6 text-center">
+          <div class="mx-auto mb-4 grid h-12 w-12 place-items-center rounded-full bg-teaGreen font-title text-rice">玩</div>
+          <h3 class="font-title text-xl font-semibold text-teaGreen">游戏玩家</h3>
+          <p class="mt-3 text-sm leading-7 text-muted">本来是因为游戏买的，没想到茶真的很好喝，包装也很治愈。</p>
+        </article>
+        <article data-animation-on-scroll class="rounded-card bg-teaCard p-6 text-center">
+          <div class="mx-auto mb-4 grid h-12 w-12 place-items-center rounded-full bg-sage font-title text-rice">班</div>
+          <h3 class="font-title text-xl font-semibold text-teaGreen">上班族</h3>
+          <p class="mt-3 text-sm leading-7 text-muted">下午泡一杯绿茶，比咖啡温和，办公桌上也很好看。</p>
+        </article>
+        <article data-animation-on-scroll class="rounded-card bg-teaCard p-6 text-center">
+          <div class="mx-auto mb-4 grid h-12 w-12 place-items-center rounded-full bg-wood font-title text-rice">礼</div>
+          <h3 class="font-title text-xl font-semibold text-teaGreen">送礼用户</h3>
+          <p class="mt-3 text-sm leading-7 text-muted">礼盒不浮夸，很有国风质感，送朋友刚刚好。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 会员 CTA 区 -->
+    <section data-animation-on-scroll class="mb-5 overflow-hidden rounded-card bg-teaGreen p-8 text-center text-rice shadow-soft sm:p-12">
+      <p class="mb-3 text-sm tracking-[0.32em] text-rice/65">茶客小会</p>
+      <h2 class="font-title text-3xl font-semibold leading-tight sm:text-4xl">加入茶客小会，领取新客茶样</h2>
+      <p class="mx-auto mt-4 max-w-[620px] text-sm leading-7 text-rice/78">获取新品上架、节气茶单、茶文化内容与游戏联动福利。</p>
+      <form class="mx-auto mt-7 flex max-w-[640px] flex-col gap-3 sm:flex-row">
+        <label class="sr-only" for="member-contact">邮箱或微信号</label>
+        <input id="member-contact" type="text" placeholder="输入你的邮箱或微信号" class="min-h-12 flex-1 rounded-full border border-rice/25 bg-rice/95 px-5 text-sm text-ink outline-none placeholder:text-muted focus:border-wood">
+        <button type="button" class="min-h-12 rounded-full bg-wood px-8 text-sm font-medium text-rice transition hover:bg-[#A9875E]">领取试饮装</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer 页脚 -->
+  <footer class="mt-10 rounded-t-card bg-footerGreen px-5 py-12 text-rice">
+    <div class="mx-auto max-w-[1200px]">
+      <div class="grid grid-cols-1 gap-10 md:grid-cols-[1.35fr_1fr_1fr_1.2fr]">
+        <div>
+          <div class="flex items-center gap-3">
+            <h2 class="font-title text-3xl font-semibold">客官请喝茶</h2>
+            <span class="grid h-9 w-9 place-items-center rounded-[8px] bg-[#A64532] font-title text-xs">茶铺</span>
+          </div>
+          <p class="mt-5 max-w-[320px] text-sm leading-7 text-rice/72">我们致力于把游戏里的治愈茶馆，带到你的现实生活。</p>
+        </div>
+
+        <div>
+          <h3 class="mb-4 font-title text-lg font-semibold">快速导航</h3>
+          <ul class="space-y-3 text-sm text-rice/72">
+            <li><a class="hover:text-rice" href="#">首页</a></li>
+            <li><a class="hover:text-rice" href="#products">茶品</a></li>
+            <li><a class="hover:text-rice" href="#culture">茶文化</a></li>
+            <li><a class="hover:text-rice" href="#story">关于我们</a></li>
+            <li><a class="hover:text-rice" href="#visit">门店体验</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="mb-4 font-title text-lg font-semibold">帮助中心</h3>
+          <ul class="space-y-3 text-sm text-rice/72">
+            <li><a class="hover:text-rice" href="#">常见问题</a></li>
+            <li><a class="hover:text-rice" href="#">配送与支付</a></li>
+            <li><a class="hover:text-rice" href="#">售后服务</a></li>
+            <li><a class="hover:text-rice" href="#">联系我们</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="mb-4 font-title text-lg font-semibold">订阅资讯</h3>
+          <p class="text-sm leading-7 text-rice/72">获取新品推荐、茶文化分享和专属优惠</p>
+          <div class="mt-5 flex gap-2">
+            <input type="text" placeholder="邮箱或微信号" class="min-h-11 min-w-0 flex-1 rounded-full bg-rice px-4 text-sm text-ink outline-none placeholder:text-muted">
+            <button class="min-h-11 rounded-full bg-wood px-4 text-sm text-rice">订阅</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 border-t border-rice/10 pt-6 text-center text-xs text-rice/55">
+        © 2026 客官请喝茶。保留所有权利。
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-on-scroll-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+
+      document.querySelectorAll('[data-animation-on-scroll]').forEach((element) => {
+        element.classList.add('animate-on-scroll-hidden');
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+</html>
